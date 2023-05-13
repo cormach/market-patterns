@@ -8,12 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - name: Install dependencies
+      - name: Install pipenv
         run: |
-          pip install sphinx sphinx_rtd_theme
+          pip install pipenv
       - name: Sphinx build
         run: |
+<<<<<<< HEAD
           sphinx-build docs docs/_build
+=======
+          pipenv run sphinx-build docs docs/_build
+>>>>>>> 224488a8d5e61df3e204f037d50ae5980cefaa66
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
