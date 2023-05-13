@@ -15,7 +15,7 @@ jobs:
         run: pipenv sync
       - name: Sphinx build
         run: |
-          sphinx-build docs docs/_build
+          pipenv run sphinx-build docs docs/_build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
