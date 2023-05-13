@@ -1,0 +1,1 @@
+# Algorithmically identifying highs and lows
