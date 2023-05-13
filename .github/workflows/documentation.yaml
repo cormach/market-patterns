@@ -11,7 +11,8 @@ jobs:
       - name: Install pipenv
         run: |
           pip install pipenv
-          pipenv sync
+      - name: Sync pipenv
+        run: pipenv sync
       - name: Sphinx build
         run: |
           sphinx-build docs docs/_build
