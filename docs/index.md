@@ -5,8 +5,7 @@
 
 # Welcome to market-patterns's documentation!
 
-```{include}
-peaks
+```{include} peaks.md
 ```
 
 ```{toctree}
